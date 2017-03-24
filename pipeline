@@ -35,4 +35,6 @@ nohup blastx -query 18.fsa -db /home/ubuntu/breu_branco/trimmomatic_paired/unipr
 
 #24th of April, 2017
 
+#After finding the right barcode and allowing sabre to use 2 mismatches, I could demultiplex the libraries getting the following result:
+
 
