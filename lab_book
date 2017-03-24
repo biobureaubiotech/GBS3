@@ -1,0 +1,26 @@
+24th of April, 2017
+
+About the GBS3 library. I manage last week to demultiplex it (using sabre and possibility of 2 mismatches). However, I don't know 
+which other barcode is presente there. So thenI tried trimming with trimmomatic for Nexte or TruSeq adaptors.
+
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/NexteraPE-PE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+or
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.truseq.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.truseq.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.truseq.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.truseq.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/alltruseq:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+
+Nextera trimming result:
+Input Read Pairs: 18086000 Both Surviving: 18054968 (99,83%) Forward Only Surviving: 28219 (0,16%) Reverse Only Surviving: 1 (0,00%) Dropped: 2812 (0,02%)
+TrimmomaticPE: Completed successfully
+
+TruSeq trimming result:
+Input Read Pairs: 18086000 Both Surviving: 12978167 (71,76%) Forward Only Surviving: 119693 (0,66%) Reverse Only Surviving: 87424 (0,48%) Dropped: 4900716 (27,10%)
+TrimmomaticPE: Completed successfully
+
+Priscillas adaptors trimmomatic command line:
+
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+Results:
+Input Read Pairs: 18086000 Both Surviving: 13129429 (72,59%) Forward Only Surviving: 4953746 (27,39%) Reverse Only Surviving: 7 (0,00%) Dropped: 2818 (0,02%)
+TrimmomaticPE: Completed successfully
+
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.49.fastq GBS-MR3_S1_L008_R2_001.APEKI.49.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65 &
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.51.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65 &
