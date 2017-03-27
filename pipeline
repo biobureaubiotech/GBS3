@@ -33,8 +33,15 @@ nohup blastx -query 17.fsa -db /home/ubuntu/breu_branco/trimmomatic_paired/unipr
 nohup blastx -query 18.fsa -db /home/ubuntu/breu_branco/trimmomatic_paired/uniprot_sprot.fasta -evalue 1e-05 -out 18.fsa.uniprot
 
 
-#24th of April, 2017
+#24th of March, 2017
 
 #After finding the right barcode and allowing sabre to use 2 mismatches, I could demultiplex the libraries getting the following result:
 
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/NexteraPE-PE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+
+#27th of March, 2017
+#using rainbow in the demultiplexed, adaptor free GBS3
+
+/home/bioma/scripts/rainbow_2.0.4/./rainbow cluster -1 GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.GIB.fastq -2 GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.GIB.fastq > rbcluster.50.out 2> 50.log
+/home/bioma/scripts/rainbow_2.0.4/./rainbow div -i rbcluster.50.out -o rbdiv.50.out
 
