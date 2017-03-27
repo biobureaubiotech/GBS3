@@ -1,4 +1,4 @@
-24th of April, 2017
+24th of March, 2017
 
 About the GBS3 library. I manage last week to demultiplex it (using sabre and possibility of 2 mismatches). However, I don't know 
 which other barcode is presente there. So thenI tried trimming with trimmomatic for Nexte or TruSeq adaptors.
@@ -17,6 +17,12 @@ TrimmomaticPE: Completed successfully
 
 Priscillas adaptors trimmomatic command line:
 
+The adaptors from Prrscilla contained in the GBS file are:
+>adapt_Fw
+ACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>adapt_Rv
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+
 nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
 Results:
 Input Read Pairs: 18086000 Both Surviving: 13129429 (72,59%) Forward Only Surviving: 4953746 (27,39%) Reverse Only Surviving: 7 (0,00%) Dropped: 2818 (0,02%)
@@ -24,3 +30,23 @@ TrimmomaticPE: Completed successfully
 
 nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.49.fastq GBS-MR3_S1_L008_R2_001.APEKI.49.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.49.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65 &
 nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.51.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65 &
+
+
+27th of March, 2017
+
+Bellow are the results for the demultiplexing with sabre, from a few weeks ago.
+
+/home/bioma/scripts/sabre/./sabre pe -c -f GBS-MR3_S1_L008_R1_001.fastq -r GBS-MR3_S1_L008_R2_001.fastq -b barcodes.49.59.51.txt -m 2 -u unknown_barcode.49.59.51.1.fastq -w unknown_barcode.49.59.51.2.fastq
+
+
+Total FastQ records: 345026062 (172513031 pairs)
+
+FastQ records for barcode GCGAGAT: 87111538 (43555769 pairs)
+FastQ records for barcode TACGTGA: 64451578 (32225789 pairs)
+FastQ records for barcode GAACATT: 160696860 (80348430 pairs)
+
+FastQ records with no barcode match: 32766086 (16383043 pairs)
+
+Number of mismatches allowed: 2
+
+
