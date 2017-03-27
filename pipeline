@@ -51,4 +51,5 @@ nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Tr
 /home/bioma/scripts/rainbow_2.0.4/./rainbow cluster -1 GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.GIB.fastq -2 GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.GIB.fastq > rbcluster.50.out 2> 50.log
 /home/bioma/scripts/rainbow_2.0.4/./rainbow div -i rbcluster.50.out -o rbdiv.50.out
 /home/bioma/scripts/rainbow_2.0.4/./rainbow merge -o rbasm.50.out -a -i rbdiv.50.out -N500
+perl /home/bioma/scripts/rainbow_2.0.4/select_all_rbcontig.pl rbasm.50.out > rbasm.50.out.all.fasta
 
