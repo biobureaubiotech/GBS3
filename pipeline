@@ -35,9 +35,15 @@ nohup blastx -query 18.fsa -db /home/ubuntu/breu_branco/trimmomatic_paired/unipr
 
 #24th of March, 2017
 
-#After finding the right barcode and allowing sabre to use 2 mismatches, I could demultiplex the libraries getting the following result:
+#After finding the right barcode and allowing sabre to use 2 mismatches, I could demultiplex the libraries getting the result described in the lab_book for 24th of March.
+#Then, I needed to trim for GBS adaptors, so I did that using trimmomatic and the adaptors contained in Priscila's report (see details in the lab_book for 24th of March).
 
-nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/NexteraPE-PE.fa:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+
+
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.50.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.50.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.50.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+nohup java -jar /home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/trimmomatic.jar PE -threads 2 -phred33 GBS-MR3_S1_L008_R1_001.APEKI.51.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_paired.GIB.fastq GBS-MR3_S1_L008_R1_001.APEKI.51.foward_unpaired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.paired.GIB.fastq GBS-MR3_S1_L008_R2_001.APEKI.51.reverse.unpaired.GIB.fastq ILLUMINACLIP:/home/bioma/Downloads/trinityrnaseq_r20140717/trinity-plugins/Trimmomatic-0.32/adapters/GIB:2:30:10 LEADING:10 TRAILING:10 SLIDINGWINDOW:4:2 MINLEN:65
+
+
 
 #27th of March, 2017
 #using rainbow in the demultiplexed, adaptor free GBS3
