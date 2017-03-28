@@ -62,5 +62,6 @@ After rainbonw merge: 624440 longer reads. Longest 535bp, shortest 65bp. Average
 For sample 49 - 30,432,381 read pairs surviving after trimming (67,7% of total). 
 After rainbow merge: 1,973,585 longer reads. Longest 627 bp, shortest 65 bp. Average size 108 bp. 
 
-For sample 51 - 
+For sample 51 - 21,150,858 read pairs surviving after trimming (84,07% of total) 
+After rainbow merge: 617,820 longer reads. Longest 1145bp, shortest 65 bp. Average size 103 bp. 
 
