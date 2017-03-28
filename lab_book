@@ -50,3 +50,17 @@ FastQ records with no barcode match: 32766086 (16383043 pairs)
 Number of mismatches allowed: 2
 
 
+28th of March, 2017.
+
+So, After demultiplexing the 3 libraries, I've trimmed for the GBS adapters and then runned rainbow RAD clustering https://sourceforge.net/projects/bio-rainbow/files/
+
+Comamnd to sort second collumn by higher to smaller number: sort -n -r -k2
+
+For samples 50 - Protium kleinii. 13,129,429 reads pairs survived after trimming (72% of total).
+After rainbonw merge: 624440 longer reads. Longest 535bp, shortest 65bp. Average size 107 bp.
+
+For sample 49 - 30,432,381 read pairs surviving after trimming (67,7% of total). 
+After rainbow merge: 1,973,585 longer reads. Longest 627 bp, shortest 65 bp. Average size 108 bp. 
+
+For sample 51 - 
+
