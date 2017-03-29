@@ -60,3 +60,7 @@ perl /home/bioma/scripts/rainbow_2.0.4/select_all_rbcontig.pl rbasm.50.out > rba
 /home/bioma/scripts/rainbow_2.0.4/./rainbow div -i rbcluster.51.out -o rbdiv.51.out
 /home/bioma/scripts/rainbow_2.0.4/./rainbow merge -o rbasm.51.out -a -i rbdiv.51out -N500
 #results presented in the lab_book
+
+#29th of March, 2017
+
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.51.out.all.fasta -o matches.m8
