@@ -62,5 +62,9 @@ perl /home/bioma/scripts/rainbow_2.0.4/select_all_rbcontig.pl rbasm.50.out > rba
 #results presented in the lab_book
 
 #29th of March, 2017
-
+../diamond makedb --in uniprot_sprot.fasta -d uniprot
 ../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.51.out.all.fasta -o matches.m8
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.50.out.all.fasta -o rbasm.50.out.all.m8
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.49.out.all.fasta -o rbasm.49.out.all.m8
+
+
