@@ -66,3 +66,14 @@ For sample 51 - 21,150,858 read pairs surviving after trimming (84,07% of total)
 After rainbow merge: 617,820 longer reads. Longest 1145bp, shortest 65 bp. Average size 103 bp. 
 
 Then, I got all these results and upload to biobureau S3 (s3://bioinfobiobureau/output/)
+
+30th of March, 2017.
+
+Yesterday I runned diamond (https://github.com/bbuchfink/diamond) to annotated the clustered reads against Uniprot database. 
+
+Sample 49 - 81,310 sequences annotated from a total of 1,973,585 rainbow-clustered-reads
+Sample 50 - 57,130 sequences annotated from a total of 624,440 rainbow-clustered-reads
+Sample 51 - 38,335 sequences annotated from a total of 617,820 rainbow-clustered-reads
+
+
+ 
