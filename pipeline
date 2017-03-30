@@ -67,4 +67,13 @@ perl /home/bioma/scripts/rainbow_2.0.4/select_all_rbcontig.pl rbasm.50.out > rba
 ../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.50.out.all.fasta -o rbasm.50.out.all.m8
 ../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.49.out.all.fasta -o rbasm.49.out.all.m8
 
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.49.out.all.fasta --more-sensitive -o rbasm.49.out.all.moresensitive.m8
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.50.out.all.fasta --more-sensitive -o rbasm.50.out.all.moresensitive.m8
+../scripts/./diamond blastx -d ../scripts/db/uniprot -q rbasm.51.out.all.fasta --more-sensitive -o rbasm.51.out.all.moresensitive.m8
+
+cat rbasm.49.out.all.moresensitive.m8 | awk '{print $1}' | sort -u > rbasm.49.out.all.moresensitive.m8.nonredunt
+cat rbasm.50.out.all.moresensitive.m8 | awk '{print $1}' | sort -u > rbasm.50.out.all.moresensitive.m8.nonredunt
+cat rbasm.51.out.all.moresensitive.m8 | awk '{print $1}' | sort -u > rbasm.51.out.all.moresensitive.m8.nonredunt
+
+
 
