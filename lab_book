@@ -71,9 +71,9 @@ Then, I got all these results and upload to biobureau S3 (s3://bioinfobiobureau/
 
 Yesterday I runned diamond (https://github.com/bbuchfink/diamond) to annotated the clustered reads against Uniprot database. 
 
-Sample 49 - 81,310 sequences annotated from a total of 1,973,585 rainbow-clustered-reads
-Sample 50 - 57,130 sequences annotated from a total of 624,440 rainbow-clustered-reads
-Sample 51 - 38,335 sequences annotated from a total of 617,820 rainbow-clustered-reads
+Sample 49 - 95,329 sequences annotated from a total of 1,973,585 rainbow-clustered-reads
+Sample 50 - 64,114 sequences annotated from a total of 624,440 rainbow-clustered-reads
+Sample 51 - 42,280 sequences annotated from a total of 617,820 rainbow-clustered-reads
 
 
  
